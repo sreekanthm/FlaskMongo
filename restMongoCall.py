@@ -23,7 +23,7 @@ def get_all_star():
 		output.append({'name': s['name'], 'distance' : s['distance']})
 	return jsonify({'result': output})
 
-@app.route('/star/', methods=['GET'])
+@app.route('/star', methods=['GET'])
 def get_one_star(name):
 
 	star = mongo.db.stars
